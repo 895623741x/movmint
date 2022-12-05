@@ -1,6 +1,6 @@
-package GoodTypes;
+package Enums;
 
-public enum GoodType {
+public enum ProductType {
     BOOK,
     FOOD,
     MEDICINE,

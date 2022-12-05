@@ -1,15 +1,17 @@
 package Objects;
 
-import Exceptions.GoodNotFoundException;
+import Exceptions.ProductNotFoundException;
 import Interfaces.ShoppingCartInterface;
 
 import java.util.*;
 
 public class ShoppingCart implements ShoppingCartInterface {
     Map<String, Product> map;
+    String shoppingCartName;
 
-    public ShoppingCart() {
+    public ShoppingCart(String shoppingCartName) {
         map = new HashMap<>();
+        this.shoppingCartName = shoppingCartName;
     }
 
     public Map<String, Product> getShoppingCartMap() {
@@ -18,17 +20,22 @@ public class ShoppingCart implements ShoppingCartInterface {
 
     @Override
     public void addProduct(Product product) {
+        product.calculateSalesTax();
+        product.calculateReceiptPrice();
         this.map.put(product.getName(), product);
     }
 
     @Override
-    public void removeProduct(String productName) throws GoodNotFoundException {
+    public void removeProduct(String productName) throws ProductNotFoundException {
         if (map.containsKey(productName)) {
             map.remove(productName);
         } else {
-            throw new GoodNotFoundException("the product " + productName + " is not found");
+            throw new ProductNotFoundException("the product " + productName + " is not found");
         }
     }
 
+    public String getShoppingCartName() {
+        return this.shoppingCartName;
+    }
 
 }

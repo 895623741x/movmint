@@ -1,0 +1,6 @@
+receipt1 output:
+1 chocolate bar: 0.85
+1 book: 12.49
+1 music CD: 16.49
+Sales Taxes: 1.5
+Total: 29.83

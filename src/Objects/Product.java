@@ -1,6 +1,6 @@
 package Objects;
 
-import GoodTypes.ProductType;
+import Enums.ProductType;
 
 public abstract class Product {
     private String name;
@@ -8,7 +8,9 @@ public abstract class Product {
     private int quantity;
     private float salesTax;
     private ProductType productType;
-    private float ReceiptPrice;
+    private float receiptPrice;
+    private final float BASIC_SALES_TAX = 0.1f;
+    private final float IMPORT_TAX = 0.05f;
 
 
     public Product(String name, float price, int quantity, ProductType productType) {
@@ -18,8 +20,8 @@ public abstract class Product {
         this.productType = productType;
     }
 
-    public abstract float getReceiptPrice();
-    public abstract float getSalesTax();
+    public abstract void calculateReceiptPrice();
+    public abstract void calculateSalesTax();
     public String getName() {
         return name;
     }
