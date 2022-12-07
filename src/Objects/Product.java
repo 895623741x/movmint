@@ -9,8 +9,6 @@ public abstract class Product implements ProductInterface {
     private int quantity;
     private ProductType productType;
 
-
-
     public Product(String name, float price, int quantity, ProductType productType) {
         this.name = name;
         this.price = price;

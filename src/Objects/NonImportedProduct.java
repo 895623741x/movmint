@@ -4,7 +4,6 @@ import Enums.ProductType;
 import Helper.CalculationHelper;
 
 public class NonImportedProduct extends Product {
-
     private final float BASIC_SALES_TAX = 0.1f;
     private float salesTax;
     private float receiptPrice;

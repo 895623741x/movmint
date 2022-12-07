@@ -7,7 +7,7 @@ import Objects.*;
 import org.junit.Test;
 import Enums.ProductType;
 
-public class ProductReceiptJUnit {
+public class ProductReceiptTests {
     private static final double DELTA = 1e-5;
 
     // Input 1

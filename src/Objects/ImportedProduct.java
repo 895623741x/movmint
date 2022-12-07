@@ -5,11 +5,11 @@ import Helper.CalculationHelper;
 
 
 public class ImportedProduct extends Product {
-
     private final float BASIC_SALES_TAX = 0.1f;
     private final float IMPORT_TAX = 0.05f;
     private float salesTax;
     private float receiptPrice;
+
     public ImportedProduct(String name, float price, int quantity, ProductType productType) {
         super(name, price, quantity, productType);
         this.salesTax = 0;
