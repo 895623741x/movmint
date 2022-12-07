@@ -1,0 +1,8 @@
+receipt4 output:
+
+1 shampoo: 22.0
+2 imported book: 67.18
+1 imported tool: 10.34
+2 cookies: 20.0
+Sales Taxes: 6.55
+Total: 119.52

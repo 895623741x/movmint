@@ -1,16 +1,14 @@
 package Objects;
 
 import Enums.ProductType;
+import Interfaces.ProductInterface;
 
-public abstract class Product {
+public abstract class Product implements ProductInterface {
     private String name;
     private float price;
     private int quantity;
-    private float salesTax;
     private ProductType productType;
-    private float receiptPrice;
-    private final float BASIC_SALES_TAX = 0.1f;
-    private final float IMPORT_TAX = 0.05f;
+
 
 
     public Product(String name, float price, int quantity, ProductType productType) {
@@ -21,7 +19,9 @@ public abstract class Product {
     }
 
     public abstract void calculateReceiptPrice();
+
     public abstract void calculateSalesTax();
+
     public String getName() {
         return name;
     }
@@ -30,7 +30,8 @@ public abstract class Product {
         this.name = name;
     }
 
-    public float getPrice() {
+    // get the product price before tax
+    public float getOriginalPrice() {
         return price;
     }
 
